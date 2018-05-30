@@ -1,0 +1,14 @@
+curl -X PUT "localhost:9200/shakespeare" -H 'Content-Type: application/json' -d'
+{
+ "mappings": {
+  "doc": {
+   "properties": {
+    "speaker": {"type": “string”},
+    "play_name": {"type": "string"},
+    "line_id": {"type": "integer"},
+    "speech_number": {"type": "integer"}
+   }
+  }
+ }
+}
+'
